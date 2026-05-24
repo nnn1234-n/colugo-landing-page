@@ -234,7 +234,6 @@ project/
 
 ## ⚙️ قسم القدرات التقنية (Capabilities)
 
-![قسم القدرات](images/screenshot3.png)
 ![قسم القدرات](images/screenshot4.png)
 
 
