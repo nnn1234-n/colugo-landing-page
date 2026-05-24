@@ -235,6 +235,8 @@ project/
 ## ⚙️ قسم القدرات التقنية (Capabilities)
 
 ![قسم القدرات](images/screenshot3.png)
+![قسم القدرات](images/screenshot4.png)
+
 
 قسم يعرض القدرات التقنية الأساسية للمشروع مثل:
 
@@ -249,7 +251,6 @@ project/
 
 ## 🎯 قسم Precision Engineering
 
-![قسم Precision Engineering](images/screenshot4.png)
 
 ![قسم Precision Engineering](images/screenshot5.png)
 
