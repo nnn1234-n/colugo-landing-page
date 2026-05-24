@@ -1,1 +1,554 @@
+<!DOCTYPE html>
 
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Colugo - Premium Mobile App Landing Page</title>
+<!-- Google Font: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols for Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-tertiary-container": "#ffeedd",
+                "surface-container": "#e7eeff",
+                "on-primary-fixed": "#00174b",
+                "background": "#f9f9ff",
+                "secondary-fixed-dim": "#d2bbff",
+                "primary-fixed": "#dbe1ff",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f0f3ff",
+                "on-surface": "#111c2d",
+                "on-primary": "#ffffff",
+                "on-primary-fixed-variant": "#003ea8",
+                "on-primary-container": "#eeefff",
+                "surface": "#f9f9ff",
+                "secondary": "#712ae2",
+                "on-secondary-fixed-variant": "#5a00c6",
+                "tertiary-fixed-dim": "#ffb95f",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed": "#ffddb8",
+                "surface-container-high": "#dee8ff",
+                "inverse-surface": "#263143",
+                "surface-tint": "#0053db",
+                "on-secondary-fixed": "#25005a",
+                "surface-container-highest": "#d8e3fb",
+                "on-background": "#111c2d",
+                "secondary-fixed": "#eaddff",
+                "on-tertiary-fixed-variant": "#653e00",
+                "inverse-primary": "#b4c5ff",
+                "primary": "#004ac6",
+                "outline": "#737686",
+                "inverse-on-surface": "#ecf1ff",
+                "primary-container": "#2563eb",
+                "tertiary": "#784b00",
+                "surface-bright": "#f9f9ff",
+                "on-tertiary-fixed": "#2a1700",
+                "primary-fixed-dim": "#b4c5ff",
+                "outline-variant": "#c3c6d7",
+                "on-secondary-container": "#fffbff",
+                "surface-variant": "#d8e3fb",
+                "surface-dim": "#cfdaf2",
+                "secondary-container": "#8a4cfc",
+                "on-surface-variant": "#434655",
+                "on-error-container": "#93000a",
+                "tertiary-container": "#996100",
+                "on-tertiary": "#ffffff",
+                "on-error": "#ffffff",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "brand": {
+                  "primary": "#004ac6",
+                  "dark": "#111c2d",
+                  "surface": "#f9f9ff"
+                }
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "section-padding": "80px",
+                "margin-mobile": "16px",
+                "container-max": "1200px",
+                "base": "8px",
+                "gutter": "24px"
+        },
+        "fontFamily": {
+                "sans": ["Plus Jakarta Sans", "sans-serif"],
+                "label-md": ["Inter"],
+                "headline-lg-mobile": ["Plus Jakarta Sans"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-xl-mobile": ["Plus Jakarta Sans"],
+                "headline-md": ["Plus Jakarta Sans"],
+                "headline-xl": ["Plus Jakarta Sans"],
+                "headline-lg": ["Plus Jakarta Sans"]
+        }
+      },
+    },
+  }
+</script>
+<style data-purpose="custom-styling">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero-bg {
+      background-image: linear-gradient(rgba(249, 249, 255, 0.85), rgba(249, 249, 255, 0.85)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOKaQO2Q_NQim_Cs_7qHw48dFIRztsMKbRxjBX7oLSHKLJYEC7ldzGserG5vDIuOeUfVqYMT4AYoSxBmZk2n8qJwdof-Vbm7yQMBUYD6rICWQeBtId-yf1dGYtMKoxIqxHzo8wD_W21z0Tq7p_AQx99P-NkyhoE7Bz7E6MeNp1hs4lVD9VKGcqLbwELLXyUxxKVas9ilM6UW7XD7wZBY4zpMf5O-8SOpDh0vmjuJbkT-beAnrCByDZtJrzVXJJ1lO_f0mmCgm5MEh6');
+      background-size: cover;
+      background-position: center;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    }
+    .section-spacing {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .card-shadow {
+      box-shadow: 0 20px 40px -15px rgba(0, 74, 198, 0.1);
+    }
+    .text-balance {
+      text-wrap: balance;
+    }
+    .decoration-line {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, #004ac6, #712ae2);
+      margin: 1.5rem auto;
+      border-radius: 2px;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #004ac6 0%, #712ae2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .feature-icon-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-icon-container::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(0, 74, 198, 0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .group:hover .feature-icon-container::after {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 bg-white/70 backdrop-blur-md z-50 border-b border-white/20">
+<nav class="container mx-auto px-6 py-5 flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center">
+<span class="text-2xl font-extrabold text-brand-dark tracking-tight">Colugo<span class="text-primary">.</span></span>
+</div>
+<!-- Navigation Links -->
+<div class="hidden lg:flex items-center space-x-9">
+<a class="text-sm font-bold text-primary" href="#">Home</a>
+<a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#features">Features</a>
+<a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#screenshots">Screenshots</a>
+<a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a>
+<a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<!-- CTA Button -->
+<div>
+<a class="bg-primary text-white px-8 py-3 rounded-full font-bold text-sm hover:scale-105 transition-all shadow-xl shadow-primary/20" href="#">
+          Try It Free
+        </a>
+</div>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<main class="">
+<!-- BEGIN: HeroSection -->
+<section class="hero-bg relative overflow-hidden pt-32 pb-24 min-h-[90vh] flex items-center">
+<div class="container mx-auto px-6 flex flex-col lg:flex-row items-center relative z-10">
+<!-- Left side: Text Content -->
+<div class="lg:w-1/2 mb-16 lg:mb-0 text-center lg:text-left">
+<span class="inline-block py-2 px-4 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">Innovative App Solutions</span>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-brand-dark leading-[1.1] mb-8 text-balance">
+            Elevate Your Business with <span class="gradient-text">Colugo</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant mb-12 max-w-xl leading-relaxed mx-auto lg:mx-0">
+            Design, deploy, and scale your mobile presence with the most advanced template on the market. Crafted for growth and user delight.
+          </p>
+<!-- App Store Buttons -->
+<div class="flex flex-wrap justify-center lg:justify-start gap-5">
+<a class="bg-brand-dark text-white flex items-center px-7 py-3.5 rounded-xl hover:bg-black transition-all hover:-translate-y-1 shadow-2xl shadow-black/10" href="#">
+<svg class="w-7 h-7 mr-3" fill="currentColor" viewbox="0 0 24 24"><path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.61 3 21.09 3 20.5M16.81 15.12L18.77 14L21.31 12.5C21.75 12.24 21.75 11.76 21.31 11.5L18.77 10L16.81 8.88L14.74 10.95L16.81 15.12M4.96 2.65L14.03 11.72L16.1 9.65L5.75 3.12C5.45 2.94 5.14 2.78 4.96 2.65M4.96 21.35C5.14 21.22 5.45 21.06 5.75 20.88L16.1 14.35L14.03 12.28L4.96 21.35Z"></path></svg>
+<div class="text-left">
+<div class="text-[10px] uppercase font-bold text-gray-400">GET IT ON</div>
+<div class="text-lg font-bold leading-none">Google Play</div>
+</div>
+</a>
+<a class="bg-brand-dark text-white flex items-center px-7 py-3.5 rounded-xl hover:bg-black transition-all hover:-translate-y-1 shadow-2xl shadow-black/10" href="#">
+<svg class="w-7 h-7 mr-3" fill="currentColor" viewbox="0 0 24 24"><path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.07,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"></path></svg>
+<div class="text-left">
+<div class="text-[10px] uppercase font-bold text-gray-400">Download on the</div>
+<div class="text-lg font-bold leading-none">App Store</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Right side: Illustration Mockup -->
+<div class="lg:w-1/2 flex justify-center items-center">
+<div class="relative w-full max-w-lg">
+<!-- Visual interest: Glassmorphism Floating Elements -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary/20 rounded-3xl blur-2xl animate-pulse"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl animate-bounce" style="animation-duration: 4s;"></div>
+<!-- Smartphone Mockup with high polish -->
+<div class="relative z-10 mx-auto w-[280px] h-[580px] bg-brand-dark rounded-[3rem] p-4 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] ring-1 ring-white/10">
+<div class="w-full h-full bg-white rounded-[2.2rem] overflow-hidden relative">
+<!-- Screen Content -->
+<div class="absolute top-0 w-full h-8 bg-white flex justify-center items-end pb-1">
+<div class="w-16 h-4 bg-brand-dark rounded-full"></div>
+</div>
+<div class="p-6 pt-12 space-y-6">
+<div class="h-40 bg-gradient-to-br from-primary to-secondary rounded-2xl"></div>
+<div class="space-y-3">
+<div class="h-4 w-3/4 bg-surface-container rounded"></div>
+<div class="h-4 w-1/2 bg-surface-container rounded"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-24 bg-surface-container-low rounded-xl"></div>
+<div class="h-24 bg-surface-container-low rounded-xl"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: StatsSection -->
+<section class="bg-white py-24 border-b border-surface-container-low">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16">
+<div class="flex flex-col items-center group">
+<div class="w-16 h-16 bg-primary/5 text-primary rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<div class="text-4xl font-extrabold text-brand-dark tracking-tight">1,020+</div>
+<div class="text-on-surface-variant text-sm font-bold uppercase tracking-wider mt-3">Active Users</div>
+</div>
+<div class="flex flex-col items-center group">
+<div class="w-16 h-16 bg-secondary/5 text-secondary rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">favorite</span>
+</div>
+<div class="text-4xl font-extrabold text-brand-dark tracking-tight">5,679</div>
+<div class="text-on-surface-variant text-sm font-bold uppercase tracking-wider mt-3">Happy Clients</div>
+</div>
+<div class="flex flex-col items-center group">
+<div class="w-16 h-16 bg-tertiary-container/10 text-tertiary rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">star</span>
+</div>
+<div class="text-4xl font-extrabold text-brand-dark tracking-tight">2,660</div>
+<div class="text-on-surface-variant text-sm font-bold uppercase tracking-wider mt-3">Five Stars</div>
+</div>
+<div class="flex flex-col items-center group">
+<div class="w-16 h-16 bg-primary/5 text-primary rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">download</span>
+</div>
+<div class="text-4xl font-extrabold text-brand-dark tracking-tight">6,789+</div>
+<div class="text-on-surface-variant text-sm font-bold uppercase tracking-wider mt-3">Total Downloads</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: StatsSection -->
+<!-- BEGIN: AboutSection -->
+<section class="section-spacing bg-surface-container-lowest" id="about">
+<div class="container mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4">About Our App</h2>
+<div class="decoration-line"></div>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
+          Crafting digital experiences that bridge the gap between technology and human emotion. Discover the Colugo difference.
+        </p>
+</div>
+<!-- About Illustration Area -->
+<div class="flex flex-col lg:flex-row items-center gap-20">
+<div class="lg:w-1/2 text-left">
+<h3 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-8 leading-tight">
+              Powerful Features <br/> Wrapped in <span class="text-primary">Elegant Design</span>
+</h3>
+<div class="space-y-8 text-on-surface-variant text-lg leading-relaxed mb-12">
+<p>Colugo isn't just another template; it's a foundation for success. We've combined years of UI/UX research with cutting-edge front-end technology to give you a product that looks stunning and performs flawlessly.</p>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-primary text-sm font-bold">check</span>
+</div>
+<p class="text-base font-medium">Intuitive user journeys designed for conversion.</p>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-primary text-sm font-bold">check</span>
+</div>
+<p class="text-base font-medium">Blazing fast performance on all devices.</p>
+</div>
+</div>
+<button class="bg-primary text-white px-10 py-4 rounded-full font-bold shadow-2xl shadow-primary/30 hover:scale-105 transition-transform">
+              Explore Documentation
+            </button>
+</div>
+<div class="lg:w-1/2 relative">
+<!-- Premium Mockup Design -->
+<div class="relative bg-gradient-to-tr from-primary/5 to-secondary/5 p-12 rounded-[3rem]">
+<div class="glass-card p-10 rounded-[2.5rem] relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<svg class="w-full h-auto relative z-10" viewbox="0 0 400 450" xmlns="http://www.w3.org/2000/svg">
+<!-- App Screens Stack Concept with Depth -->
+<rect fill="#f1f5f9" height="340" rx="20" width="200" x="140" y="20"></rect>
+<rect fill="#ffffff" height="340" rx="20" stroke="#e2e8f0" stroke-width="2" width="200" x="100" y="50"></rect>
+<rect fill="#3b82f6" height="40" rx="8" width="140" x="130" y="90"></rect>
+<rect fill="#60a5fa" height="40" rx="8" width="140" x="130" y="150"></rect>
+<rect fill="#94a3b8" height="12" rx="6" width="100" x="130" y="220"></rect>
+<rect fill="#cbd5e1" height="12" rx="6" width="80" x="130" y="245"></rect>
+<!-- Floating Element -->
+<circle cx="340" cy="350" fill="#712ae2" opacity="0.9" r="40"></circle>
+<path d="M330,350 L350,340 L350,360 Z" fill="white"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: FeaturesSection -->
+<section class="section-spacing bg-white" id="features">
+<div class="container mx-auto px-6 text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4">Awesome Features</h2>
+<div class="decoration-line"></div>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
+          The perfect blend of aesthetic appeal and functional excellence. Explore what makes Colugo the choice of industry leaders.
+        </p>
+</div>
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Feature 1 -->
+<div class="group bg-white p-10 rounded-[2rem] card-shadow transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-primary/10">
+<div class="w-24 h-24 feature-icon-container flex items-center justify-center mx-auto mb-10">
+<img alt="High Resolution" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc-jEORBRbZyoyQocsHgrN9gs5QYrZEfIwxKnooc8zDLwsmKCNqSsI_4H776JG4YUzsNl4_3AfYO9FDiAaJnfg0qOd7JmifhHPdNu3aKJdGvsBULdY5-0LTgo00lOBnKwo_IPdn5js26yp5jOMZJ3atpUl7E9OsGAJQ_gnv_9ksMwEqz7LcCw1hvK3FBgjB95xTLLJ7f1_7qa01oSRAyzOc0N4cKOvhK3W-4LeqOmDsE26Oa0a5mxH5zcWX7ZZcgpFb6fYtlZ5B4Y9"/>
+<div class="absolute inset-0 bg-blue-500/5 blur-xl rounded-full scale-50 group-hover:scale-100 transition-transform"></div>
+</div>
+<h3 class="text-2xl font-extrabold text-brand-dark mb-5 text-center">High Resolution</h3>
+<p class="text-on-surface-variant text-base leading-relaxed text-center">
+              Crystal clear imagery and vector-perfect assets that look sharp on any screen resolution, from mobile to 4K.
+            </p>
+</div>
+<!-- Feature 2 -->
+<div class="group bg-white p-10 rounded-[2rem] card-shadow transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-primary/10">
+<div class="w-24 h-24 feature-icon-container flex items-center justify-center mx-auto mb-10">
+<img alt="Unique Design" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc-jEORBRbZyoyQocsHgrN9gs5QYrZEfIwxKnooc8zDLwsmKCNqSsI_4H776JG4YUzsNl4_3AfYO9FDiAaJnfg0qOd7JmifhHPdNu3aKJdGvsBULdY5-0LTgo00lOBnKwo_IPdn5js26yp5jOMZJ3atpUl7E9OsGAJQ_gnv_9ksMwEqz7LcCw1hvK3FBgjB95xTLLJ7f1_7qa01oSRAyzOc0N4cKOvhK3W-4LeqOmDsE26Oa0a5mxH5zcWX7ZZcgpFb6fYtlZ5B4Y9"/>
+<div class="absolute inset-0 bg-purple-500/5 blur-xl rounded-full scale-50 group-hover:scale-100 transition-transform"></div>
+</div>
+<h3 class="text-2xl font-extrabold text-brand-dark mb-5 text-center">Unique Design</h3>
+<p class="text-on-surface-variant text-base leading-relaxed text-center">
+              A distinctive aesthetic that combines modern minimalism with vibrant accents to help your brand stand out.
+            </p>
+</div>
+<!-- Feature 3 -->
+<div class="group bg-white p-10 rounded-[2rem] card-shadow transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-primary/10">
+<div class="w-24 h-24 feature-icon-container flex items-center justify-center mx-auto mb-10">
+<img alt="Full Responsive" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc-jEORBRbZyoyQocsHgrN9gs5QYrZEfIwxKnooc8zDLwsmKCNqSsI_4H776JG4YUzsNl4_3AfYO9FDiAaJnfg0qOd7JmifhHPdNu3aKJdGvsBULdY5-0LTgo00lOBnKwo_IPdn5js26yp5jOMZJ3atpUl7E9OsGAJQ_gnv_9ksMwEqz7LcCw1hvK3FBgjB95xTLLJ7f1_7qa01oSRAyzOc0N4cKOvhK3W-4LeqOmDsE26Oa0a5mxH5zcWX7ZZcgpFb6fYtlZ5B4Y9"/>
+<div class="absolute inset-0 bg-cyan-500/5 blur-xl rounded-full scale-50 group-hover:scale-100 transition-transform"></div>
+</div>
+<h3 class="text-2xl font-extrabold text-brand-dark mb-5 text-center">Full Responsive</h3>
+<p class="text-on-surface-variant text-base leading-relaxed text-center">
+              Meticulously crafted breakpoints ensure your app looks and works perfectly on every device size and orientation.
+            </p>
+</div>
+<!-- Feature 4 -->
+<div class="group bg-white p-10 rounded-[2rem] card-shadow transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-primary/10">
+<div class="w-24 h-24 feature-icon-container flex items-center justify-center mx-auto mb-10">
+<img alt="Clean Codes" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc-jEORBRbZyoyQocsHgrN9gs5QYrZEfIwxKnooc8zDLwsmKCNqSsI_4H776JG4YUzsNl4_3AfYO9FDiAaJnfg0qOd7JmifhHPdNu3aKJdGvsBULdY5-0LTgo00lOBnKwo_IPdn5js26yp5jOMZJ3atpUl7E9OsGAJQ_gnv_9ksMwEqz7LcCw1hvK3FBgjB95xTLLJ7f1_7qa01oSRAyzOc0N4cKOvhK3W-4LeqOmDsE26Oa0a5mxH5zcWX7ZZcgpFb6fYtlZ5B4Y9"/>
+<div class="absolute inset-0 bg-blue-500/5 blur-xl rounded-full scale-50 group-hover:scale-100 transition-transform"></div>
+</div>
+<h3 class="text-2xl font-extrabold text-brand-dark mb-5 text-center">Clean Codes</h3>
+<p class="text-on-surface-variant text-base leading-relaxed text-center">
+              Developer-friendly, modular, and well-documented code that makes customization and scaling a total breeze.
+            </p>
+</div>
+<!-- Feature 5 -->
+<div class="group bg-white p-10 rounded-[2rem] card-shadow transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-primary/10">
+<div class="w-24 h-24 feature-icon-container flex items-center justify-center mx-auto mb-10">
+<img alt="Retina Ready" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc-jEORBRbZyoyQocsHgrN9gs5QYrZEfIwxKnooc8zDLwsmKCNqSsI_4H776JG4YUzsNl4_3AfYO9FDiAaJnfg0qOd7JmifhHPdNu3aKJdGvsBULdY5-0LTgo00lOBnKwo_IPdn5js26yp5jOMZJ3atpUl7E9OsGAJQ_gnv_9ksMwEqz7LcCw1hvK3FBgjB95xTLLJ7f1_7qa01oSRAyzOc0N4cKOvhK3W-4LeqOmDsE26Oa0a5mxH5zcWX7ZZcgpFb6fYtlZ5B4Y9"/>
+<div class="absolute inset-0 bg-purple-500/5 blur-xl rounded-full scale-50 group-hover:scale-100 transition-transform"></div>
+</div>
+<h3 class="text-2xl font-extrabold text-brand-dark mb-5 text-center">Retina Ready</h3>
+<p class="text-on-surface-variant text-base leading-relaxed text-center">
+              Optimized for high-density displays, ensuring every icon, font, and image remains crisp and breathtakingly clear.
+            </p>
+</div>
+<!-- Feature 6 -->
+<div class="group bg-white p-10 rounded-[2rem] card-shadow transition-all duration-500 hover:-translate-y-2 border border-transparent hover:border-primary/10">
+<div class="w-24 h-24 feature-icon-container flex items-center justify-center mx-auto mb-10">
+<img alt="Unlimited Features" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc-jEORBRbZyoyQocsHgrN9gs5QYrZEfIwxKnooc8zDLwsmKCNqSsI_4H776JG4YUzsNl4_3AfYO9FDiAaJnfg0qOd7JmifhHPdNu3aKJdGvsBULdY5-0LTgo00lOBnKwo_IPdn5js26yp5jOMZJ3atpUl7E9OsGAJQ_gnv_9ksMwEqz7LcCw1hvK3FBgjB95xTLLJ7f1_7qa01oSRAyzOc0N4cKOvhK3W-4LeqOmDsE26Oa0a5mxH5zcWX7ZZcgpFb6fYtlZ5B4Y9"/>
+<div class="absolute inset-0 bg-cyan-500/5 blur-xl rounded-full scale-50 group-hover:scale-100 transition-transform"></div>
+</div>
+<h3 class="text-2xl font-extrabold text-brand-dark mb-5 text-center">Unlimited Features</h3>
+<p class="text-on-surface-variant text-base leading-relaxed text-center">
+              From dark mode to custom integrations, Colugo comes packed with everything you need to build a world-class app.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FeaturesSection -->
+<!-- BEGIN: AppScreenshotSection -->
+<section class="section-spacing bg-brand-dark text-white relative overflow-hidden" id="screenshots">
+<!-- Background Glows -->
+<div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]"></div>
+<div class="container mx-auto px-6 text-center relative z-10">
+<h2 class="text-4xl md:text-5xl font-extrabold mb-4">App Screenshots</h2>
+<div class="decoration-line !bg-primary"></div>
+<p class="text-gray-400 max-w-2xl mx-auto mb-20 text-lg leading-relaxed">
+          See the beauty of our user interface design in action across various app modules and user flows.
+        </p>
+<!-- Screen Showcase -->
+<div class="relative max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row gap-8 justify-center items-center">
+<div class="w-64 aspect-[9/18] bg-gray-800/50 rounded-[2rem] border border-white/5 backdrop-blur-sm overflow-hidden transform md:-rotate-6 md:translate-y-8 opacity-60">
+<div class="w-full h-full bg-gradient-to-b from-gray-700 to-transparent p-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-white/20">lock</span>
+</div>
+</div>
+<div class="w-72 aspect-[9/18] bg-gray-800 rounded-[2.5rem] border border-white/10 shadow-[0_0_50px_rgba(0,74,198,0.3)] overflow-hidden z-20 scale-110">
+<div class="w-full h-full bg-gradient-to-br from-primary to-secondary p-8 flex flex-col justify-center items-center gap-6">
+<div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-4xl">smartphone</span>
+</div>
+<div class="space-y-2 w-full">
+<div class="h-4 bg-white/20 rounded-full w-full"></div>
+<div class="h-4 bg-white/20 rounded-full w-3/4 mx-auto"></div>
+</div>
+</div>
+</div>
+<div class="w-64 aspect-[9/18] bg-gray-800/50 rounded-[2rem] border border-white/5 backdrop-blur-sm overflow-hidden transform md:rotate-6 md:translate-y-8 opacity-60">
+<div class="w-full h-full bg-gradient-to-b from-gray-700 to-transparent p-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-white/20">dashboard</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AppScreenshotSection -->
+</main>
+<footer class="bg-brand-dark text-gray-400 pt-24 pb-12 relative overflow-hidden">
+<div class="container mx-auto px-6 relative z-10">
+<!-- Newsletter Section -->
+<div class="glass-card !bg-white/5 !backdrop-blur-xl rounded-[2.5rem] p-10 md:p-16 mb-24 flex flex-col lg:flex-row items-center justify-between gap-12 border-white/10">
+<div class="max-w-lg text-center lg:text-left">
+<h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Stay ahead of the curve</h3>
+<p class="text-gray-400 text-lg">Join 10,000+ developers receiving our weekly newsletter on app design trends and product updates.</p>
+</div>
+<form class="flex flex-col sm:flex-row w-full lg:w-auto gap-4">
+<input class="bg-white/5 border border-white/10 text-white rounded-2xl px-8 py-4 focus:outline-none focus:ring-2 focus:ring-primary w-full sm:w-80 backdrop-blur-sm" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-primary/20 shrink-0" type="submit">Subscribe Now</button>
+</form>
+</div>
+<!-- Main Footer Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+<!-- Column 1: Company Logo -->
+<div class="space-y-8">
+<span class="text-3xl font-extrabold text-white tracking-tight">Colugo<span class="text-primary">.</span></span>
+<p class="leading-relaxed text-lg">
+          The ultimate toolkit for businesses ready to dominate the mobile space with exceptional design and powerful utility.
+        </p>
+<div class="flex space-x-5">
+<a class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<!-- Column 2: Quick Links -->
+<div>
+<h4 class="text-white font-bold text-xl mb-8">Navigation</h4>
+<ul class="space-y-5">
+<li><a class="hover:text-primary transition-colors flex items-center gap-2 group" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Home</a></li>
+<li><a class="hover:text-primary transition-colors flex items-center gap-2 group" href="#features"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Features</a></li>
+<li><a class="hover:text-primary transition-colors flex items-center gap-2 group" href="#about"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> About</a></li>
+<li><a class="hover:text-primary transition-colors flex items-center gap-2 group" href="#"><span class="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span> Our Blog</a></li>
+</ul>
+</div>
+<!-- Column 3: Support -->
+<div>
+<h4 class="text-white font-bold text-xl mb-8">Support</h4>
+<ul class="space-y-5">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Use</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API Status</a></li>
+</ul>
+</div>
+<!-- Column 4: Contact -->
+<div>
+<h4 class="text-white font-bold text-xl mb-8">Get in Touch</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div class="flex flex-col">
+<span class="text-white text-sm font-bold">Email us</span>
+<span class="text-base">hello@colugo.com</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div class="flex flex-col">
+<span class="text-white text-sm font-bold">Visit us</span>
+<span class="text-base">Creative Plaza, NY 10001</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<div class="flex flex-col">
+<span class="text-white text-sm font-bold">Call us</span>
+<span class="text-base">+1 (234) 567-890</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Copyright -->
+<div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-sm font-medium">© 2024 Colugo. Built with precision for visionaries.</p>
+<div class="flex gap-8 text-sm font-bold text-white/50">
+<a class="hover:text-primary" href="#">Cookies</a>
+<a class="hover:text-primary" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
